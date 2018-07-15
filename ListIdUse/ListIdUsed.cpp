@@ -90,12 +90,7 @@ uint8_t ListIdUsed (uint16_t eeprom_start, int MaxSizeId, uint16_t eepromLocatio
   uint16_t sum = fingerTemplatecount ();
   if (sum == 0)
   {
-    for (int t = 0; t < sizeof(input_uart); t++)
-    {
-      input_uart[t] = 0;
-    }
-    strcat (input_uart, "listid();");
-    spln (input_uart);
+    splnPM ("listid();");
     return 0;
   }
   else
@@ -105,10 +100,7 @@ uint8_t ListIdUsed (uint16_t eeprom_start, int MaxSizeId, uint16_t eepromLocatio
     int sumid = 0;
     uint16_t eeprom_start1 = eeprom_start;
     int h = 0;
-    for (int t = 0; t < sizeof(input_uart); t++)
-    {
-      input_uart[t] = 0;
-    }
+    memset (input_uart, 0, sizeof(input_uart));
     // convert h sang string
     datasend_encoder[0] = 0;
     strcat (input_uart, "listid(");
@@ -138,10 +130,7 @@ uint8_t ListIdUsed (uint16_t eeprom_start, int MaxSizeId, uint16_t eepromLocatio
 
             h = 0;
             sp (input_uart);
-            for (int t = 0; t < sizeof(input_uart); t++)
-            {
-              input_uart[t] = 0;
-            }
+            memset (input_uart, 0, sizeof(input_uart));
 
           }
         }
@@ -157,10 +146,7 @@ uint8_t ListIdUsed (uint16_t eeprom_start, int MaxSizeId, uint16_t eepromLocatio
       sp (input_uart);
     }
     // gui chuoi end
-    for (int t = 0; t < sizeof(input_uart); t++)
-    {
-      input_uart[t] = 0;
-    }
+    memset (input_uart, 0, sizeof(input_uart));
     strcat (input_uart, ");");
     spln (input_uart);
     // in ra chuoi

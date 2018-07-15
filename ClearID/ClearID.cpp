@@ -24,26 +24,14 @@ uint8_t ClearId (uint8_t id, uint16_t eepromLocationStartSaveId)
 
   if (p == 0)
   {
-
-    for (uint16_t j = 0; j < sizeof(input_uart); j++)
-    {
-      input_uart[j] = '\0';
-    }
-    strcat (input_uart, "clearid(\"ok\");");
-
-    eewrite ((id + eepromLocationStartSaveId), 0);
-    spln (input_uart);
+    eewrite ((id + eepromLocationStartSaveId), 0xFF);
+    splnPM ("clearid(ok);");
     // in ra
     return 0; // clear ID ok
   }
   else
   {
-    for (uint16_t j = 0; j < sizeof(input_uart); j++)
-    {
-      input_uart[j] = '\0';
-    }
-    strcat (input_uart, "clearid(\"fail\");");
-    spln (input_uart);
+    splnPM ("clearid(fail);");
   }
 
   return 5;

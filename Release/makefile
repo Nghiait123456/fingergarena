@@ -82,13 +82,13 @@ TestFuncionWithIOTLibs: $(HEX)
 
 /home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release/arduino.ar: $(AR_OBJ)
 	@echo 'Starting archiver'
-	"/home/user/software/develop/eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc-ar" rcs    /home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release/arduino.ar $(AR_OBJ)    /home/user/workspace/NoPCShare/IotTeam/IoTHeartLibs/Arduino/avr/sbash.o
+	"/home/user/software/develop/eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc-ar" rcs    /home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release/arduino.ar $(AR_OBJ)    /home/user/workspace/NoPCShare/IotTeam/IoTHeartLibs/Arduino/avr/atmega2560/csshock.o
 	@echo 'Finished building: $@'
 	@echo ' '
 
 TestFuncionWithIOTLibs.elf: $(LINK_OBJ) $(AR)
 	@echo 'Starting combiner'
-	"/home/user/software/develop/eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc" -Wall -Wextra -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "/home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release/TestFuncionWithIOTLibs.elf"  -Wl,-Map=output.map  $(LINK_OBJ) $(AR)   /home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release/arduino.ar  "-L/home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release" -lm
+	"/home/user/software/develop/eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc" -Wall -Wextra -Os -Wl,--gc-sections,--relax -mmcu=atmega2560 -o "/home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release/TestFuncionWithIOTLibs.elf"  -Wl,-Map=output.map  $(LINK_OBJ) $(AR)   /home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release/arduino.ar  "-L/home/user/workspace/eclipse1/TestFuncionWithIOTLibs/Release" -lm
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -11,11 +11,9 @@ libraries/Adafruit_Fingerprint_Sensor_Library/Adafruit_Fingerprint.cpp.o: \
  /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino/Printable.h \
  /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino/USBAPI.h \
  /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino/Arduino.h \
- /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/variants/standard/pins_arduino.h \
+ /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/variants/mega/pins_arduino.h \
  /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/libraries/SoftwareSerial/src/SoftwareSerial.h \
- /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino/Stream.h \
- /home/user/workspace/eclipse1/TestFuncionWithIOTLibs/userconfig.h \
- /home/user/workspace/NoPCShare/IotTeam/IoTHeartLibs/Arduino/avr/csshockpro.h
+ /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino/Stream.h
 
 /home/user/software/develop/eclipse/arduinoPlugin/libraries/Adafruit_Fingerprint_Sensor_Library/1.1.1/Adafruit_Fingerprint.h:
 
@@ -39,12 +37,8 @@ libraries/Adafruit_Fingerprint_Sensor_Library/Adafruit_Fingerprint.cpp.o: \
 
 /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino/Arduino.h:
 
-/home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/variants/standard/pins_arduino.h:
+/home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/variants/mega/pins_arduino.h:
 
 /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/libraries/SoftwareSerial/src/SoftwareSerial.h:
 
 /home/user/software/develop/eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.21/cores/arduino/Stream.h:
-
-/home/user/workspace/eclipse1/TestFuncionWithIOTLibs/userconfig.h:
-
-/home/user/workspace/NoPCShare/IotTeam/IoTHeartLibs/Arduino/avr/csshockpro.h:
